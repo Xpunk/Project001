@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace GeoMapper
 {
@@ -40,8 +41,15 @@ namespace GeoMapper
             this.btnStat = new System.Windows.Forms.Button();
             this.btnListStation = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnDeleteStations = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnGenerateStations = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,14 +59,10 @@ namespace GeoMapper
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.browser = new System.Windows.Forms.WebBrowser();
-            this.btnGenerateStations = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnDeleteStations = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,6 +72,10 @@ namespace GeoMapper
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -113,7 +121,7 @@ namespace GeoMapper
             // 
             // splitContainer3.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.tabControl1);
+            this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
             this.splitContainer3.Size = new System.Drawing.Size(201, 693);
             this.splitContainer3.SplitterDistance = 259;
             this.splitContainer3.TabIndex = 0;
@@ -133,11 +141,13 @@ namespace GeoMapper
             // btnStat
             // 
             this.btnStat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnStat.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStat.Font = new System.Drawing.Font("Stormfaze", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStat.ForeColor = System.Drawing.Color.White;
-            this.btnStat.Location = new System.Drawing.Point(0, 211);
+            this.btnStat.Location = new System.Drawing.Point(3, 211);
             this.btnStat.Name = "btnStat";
-            this.btnStat.Size = new System.Drawing.Size(201, 44);
+            this.btnStat.Size = new System.Drawing.Size(198, 44);
             this.btnStat.TabIndex = 6;
             this.btnStat.Text = "Statistics";
             this.btnStat.UseVisualStyleBackColor = false;
@@ -145,11 +155,13 @@ namespace GeoMapper
             // btnListStation
             // 
             this.btnListStation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnListStation.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnListStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListStation.Font = new System.Drawing.Font("Stormfaze", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListStation.ForeColor = System.Drawing.Color.White;
-            this.btnListStation.Location = new System.Drawing.Point(0, 163);
+            this.btnListStation.Location = new System.Drawing.Point(3, 163);
             this.btnListStation.Name = "btnListStation";
-            this.btnListStation.Size = new System.Drawing.Size(201, 44);
+            this.btnListStation.Size = new System.Drawing.Size(198, 44);
             this.btnListStation.TabIndex = 5;
             this.btnListStation.Text = "Station List";
             this.btnListStation.UseVisualStyleBackColor = false;
@@ -157,15 +169,36 @@ namespace GeoMapper
             // btnMap
             // 
             this.btnMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnMap.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.btnMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMap.Font = new System.Drawing.Font("Stormfaze", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMap.ForeColor = System.Drawing.Color.White;
-            this.btnMap.Location = new System.Drawing.Point(0, 115);
+            this.btnMap.Location = new System.Drawing.Point(3, 115);
             this.btnMap.Name = "btnMap";
-            this.btnMap.Size = new System.Drawing.Size(201, 44);
+            this.btnMap.Size = new System.Drawing.Size(198, 44);
             this.btnMap.TabIndex = 4;
             this.btnMap.Text = "Map";
             this.btnMap.UseVisualStyleBackColor = false;
-            this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.tabControl1);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.button2);
+            this.splitContainer4.Panel2.Controls.Add(this.button1);
+            this.splitContainer4.Size = new System.Drawing.Size(201, 430);
+            this.splitContainer4.SplitterDistance = 366;
+            this.splitContainer4.TabIndex = 0;
             // 
             // tabControl1
             // 
@@ -179,9 +212,9 @@ namespace GeoMapper
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(201, 430);
+            this.tabControl1.Size = new System.Drawing.Size(201, 366);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -202,9 +235,68 @@ namespace GeoMapper
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(193, 404);
+            this.tabPage1.Size = new System.Drawing.Size(193, 340);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Map";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Stormfaze", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(11, 231);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(174, 19);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Type de Carburant";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(7, 253);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(179, 21);
+            this.comboBox1.TabIndex = 20;
+            // 
+            // btnDeleteStations
+            // 
+            this.btnDeleteStations.Location = new System.Drawing.Point(134, 356);
+            this.btnDeleteStations.Name = "btnDeleteStations";
+            this.btnDeleteStations.Size = new System.Drawing.Size(44, 22);
+            this.btnDeleteStations.TabIndex = 19;
+            this.btnDeleteStations.Text = "Go !";
+            this.btnDeleteStations.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Stormfaze", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(27, 363);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 12);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Delete Stations";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Stormfaze", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(13, 334);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 12);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Generate Stations";
+            // 
+            // btnGenerateStations
+            // 
+            this.btnGenerateStations.Location = new System.Drawing.Point(134, 328);
+            this.btnGenerateStations.Name = "btnGenerateStations";
+            this.btnGenerateStations.Size = new System.Drawing.Size(44, 22);
+            this.btnGenerateStations.TabIndex = 15;
+            this.btnGenerateStations.Text = "Go !";
+            this.btnGenerateStations.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -280,7 +372,7 @@ namespace GeoMapper
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(193, 404);
+            this.tabPage2.Size = new System.Drawing.Size(193, 340);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Liste";
             // 
@@ -289,9 +381,29 @@ namespace GeoMapper
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(193, 404);
+            this.tabPage3.Size = new System.Drawing.Size(193, 340);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Stats";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(105, 35);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(71, 22);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(19, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 22);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // splitContainer2
             // 
@@ -317,65 +429,6 @@ namespace GeoMapper
             this.browser.Size = new System.Drawing.Size(784, 693);
             this.browser.TabIndex = 0;
             // 
-            // btnGenerateStations
-            // 
-            this.btnGenerateStations.Location = new System.Drawing.Point(134, 328);
-            this.btnGenerateStations.Name = "btnGenerateStations";
-            this.btnGenerateStations.Size = new System.Drawing.Size(44, 22);
-            this.btnGenerateStations.TabIndex = 15;
-            this.btnGenerateStations.Text = "Go !";
-            this.btnGenerateStations.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Stormfaze", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(13, 334);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 12);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Generate Stations";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Stormfaze", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(27, 363);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 12);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Delete Stations";
-            // 
-            // btnDeleteStations
-            // 
-            this.btnDeleteStations.Location = new System.Drawing.Point(134, 356);
-            this.btnDeleteStations.Name = "btnDeleteStations";
-            this.btnDeleteStations.Size = new System.Drawing.Size(44, 22);
-            this.btnDeleteStations.TabIndex = 19;
-            this.btnDeleteStations.Text = "Go !";
-            this.btnDeleteStations.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 253);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(179, 21);
-            this.comboBox1.TabIndex = 20;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Stormfaze", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(11, 231);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 19);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Type de Carburant";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,6 +448,10 @@ namespace GeoMapper
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -410,29 +467,32 @@ namespace GeoMapper
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.WebBrowser browser;
         private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.WebBrowser browser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnStat;
         private System.Windows.Forms.Button btnListStation;
         private System.Windows.Forms.Button btnMap;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TrackBar trackBar1;
-        private System.Windows.Forms.Label lblPosition;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDeleteStations;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnGenerateStations;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private SplitContainer splitContainer4;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private Label label6;
+        private ComboBox comboBox1;
+        private Button btnDeleteStations;
+        private Label label5;
+        private Label label4;
+        private Button btnGenerateStations;
+        private TextBox textBox5;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private TrackBar trackBar1;
+        private Label lblPosition;
+        private TextBox textBox1;
+        private TabPage tabPage2;
+        private TabPage tabPage3;
+        private Button button2;
+        private Button button1;
     }
 }
 

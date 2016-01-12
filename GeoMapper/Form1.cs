@@ -24,15 +24,21 @@ namespace GeoMapper
             browser.Url = new Uri("file:///" + myfile);
             //browser.ScriptErrorsSuppressed = true; //script errors
             //browser.DocumentText = "<html><body style='background-color:black'></body></html>";
-
-
+            
+            //splitContainer1.Panel1Collapsed = true;
+            //splitContainer1.Panel1.Show();
         }
 
-        private void btnMap_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            splitContainer1.Panel1Collapsed = true;
+            splitContainer1.Panel1.Hide();
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel1.Show();
+        }
     }
 }
