@@ -11,3 +11,10 @@ c:\users\unknown\documents\visual studio 2015\Projects\GeoMapper\GeoMapper\bin\D
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\bin\Debug\GeoMapper.exe.config
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.exe
 C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\bin\Debug\map.html
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\bin\Debug\GeoMapper.exe
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\bin\Debug\GeoMapper.pdb
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.csprojResolveAssemblyReference.cache
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.Form1.resources
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.Properties.Resources.resources
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.csproj.GenerateResource.Cache
