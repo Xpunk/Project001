@@ -8,3 +8,6 @@ c:\users\unknown\documents\visual studio 2015\Projects\GeoMapper\GeoMapper\obj\D
 c:\users\unknown\documents\visual studio 2015\Projects\GeoMapper\GeoMapper\obj\Debug\GeoMapper.exe
 c:\users\unknown\documents\visual studio 2015\Projects\GeoMapper\GeoMapper\obj\Debug\GeoMapper.pdb
 c:\users\unknown\documents\visual studio 2015\Projects\GeoMapper\GeoMapper\bin\Debug\map.html
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\bin\Debug\GeoMapper.exe.config
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.exe
+C:\Users\Unknown\Documents\Visual Studio 2015\Projects\Project001\GeoMapper\obj\Debug\GeoMapper.pdb

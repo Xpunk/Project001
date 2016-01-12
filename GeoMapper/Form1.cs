@@ -16,7 +16,7 @@ namespace GeoMapper
         string curDir = Directory.GetCurrentDirectory();
         public Form1()
         {
-            
+            //Salut
             InitializeComponent();
 
             String appdir = Path.GetDirectoryName(Application.ExecutablePath);
