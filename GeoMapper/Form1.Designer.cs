@@ -42,7 +42,7 @@ namespace GeoMapper
             this.btnListStation = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.tabControlTools = new System.Windows.Forms.TabControl();
+            this.tabControlTools = new GeoMapper.CustomTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -62,7 +62,7 @@ namespace GeoMapper
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.tabControlDisplay = new System.Windows.Forms.TabControl();
+            this.tabControlDisplay = new GeoMapper.CustomTabControl();
             this.tabPageMap = new System.Windows.Forms.TabPage();
             this.browser = new System.Windows.Forms.WebBrowser();
             this.tabPageList = new System.Windows.Forms.TabPage();
@@ -438,11 +438,10 @@ namespace GeoMapper
             this.tabControlDisplay.Name = "tabControlDisplay";
             this.tabControlDisplay.SelectedIndex = 0;
             this.tabControlDisplay.Size = new System.Drawing.Size(784, 754);
-            this.tabControlDisplay.TabIndex = 2;
+            this.tabControlDisplay.TabIndex = 3;
             // 
             // tabPageMap
             // 
-            this.tabPageMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tabPageMap.Controls.Add(this.browser);
             this.tabPageMap.Location = new System.Drawing.Point(4, 22);
             this.tabPageMap.Name = "tabPageMap";
@@ -460,25 +459,22 @@ namespace GeoMapper
             this.browser.Name = "browser";
             this.browser.ScrollBarsEnabled = false;
             this.browser.Size = new System.Drawing.Size(770, 722);
-            this.browser.TabIndex = 1;
+            this.browser.TabIndex = 2;
             // 
             // tabPageList
             // 
-            this.tabPageList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tabPageList.Location = new System.Drawing.Point(4, 22);
             this.tabPageList.Name = "tabPageList";
-            this.tabPageList.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageList.Size = new System.Drawing.Size(309, 728);
+            this.tabPageList.Size = new System.Drawing.Size(776, 728);
             this.tabPageList.TabIndex = 1;
-            this.tabPageList.Text = "tabPageListe";
+            this.tabPageList.Text = "tabPageList";
             this.tabPageList.UseVisualStyleBackColor = true;
             // 
             // tabPageStats
             // 
-            this.tabPageStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tabPageStats.Location = new System.Drawing.Point(4, 22);
             this.tabPageStats.Name = "tabPageStats";
-            this.tabPageStats.Size = new System.Drawing.Size(309, 728);
+            this.tabPageStats.Size = new System.Drawing.Size(776, 728);
             this.tabPageStats.TabIndex = 2;
             this.tabPageStats.Text = "tabPageStats";
             this.tabPageStats.UseVisualStyleBackColor = true;
@@ -529,7 +525,7 @@ namespace GeoMapper
         private System.Windows.Forms.Button btnListStation;
         private System.Windows.Forms.Button btnMap;
         private SplitContainer splitContainer4;
-        private TabControl tabControlTools;
+        private CustomTabControl tabControlTools;
         private TabPage tabPage1;
         private Label label6;
         private ComboBox comboBox1;
@@ -548,7 +544,7 @@ namespace GeoMapper
         private TabPage tabPage3;
         private Button button2;
         private Button button1;
-        private TabControl tabControlDisplay;
+        private CustomTabControl tabControlDisplay;
         private TabPage tabPageMap;
         private WebBrowser browser;
         private TabPage tabPageList;
