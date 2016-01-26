@@ -42,7 +42,7 @@ namespace GeoMapper
             this.btnListStation = new System.Windows.Forms.Button();
             this.btnMap = new System.Windows.Forms.Button();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlTools = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -62,7 +62,11 @@ namespace GeoMapper
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.tabControlDisplay = new System.Windows.Forms.TabControl();
+            this.tabPageMap = new System.Windows.Forms.TabPage();
             this.browser = new System.Windows.Forms.WebBrowser();
+            this.tabPageList = new System.Windows.Forms.TabPage();
+            this.tabPageStats = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -76,12 +80,14 @@ namespace GeoMapper
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControlTools.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.tabControlDisplay.SuspendLayout();
+            this.tabPageMap.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -99,7 +105,7 @@ namespace GeoMapper
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1310, 693);
+            this.splitContainer1.Size = new System.Drawing.Size(1310, 754);
             this.splitContainer1.SplitterDistance = 201;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -122,7 +128,7 @@ namespace GeoMapper
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.splitContainer4);
-            this.splitContainer3.Size = new System.Drawing.Size(201, 693);
+            this.splitContainer3.Size = new System.Drawing.Size(201, 754);
             this.splitContainer3.SplitterDistance = 259;
             this.splitContainer3.TabIndex = 0;
             // 
@@ -151,6 +157,7 @@ namespace GeoMapper
             this.btnStat.TabIndex = 6;
             this.btnStat.Text = "Statistics";
             this.btnStat.UseVisualStyleBackColor = false;
+            this.btnStat.Click += new System.EventHandler(this.btnStat_Click);
             // 
             // btnListStation
             // 
@@ -165,6 +172,7 @@ namespace GeoMapper
             this.btnListStation.TabIndex = 5;
             this.btnListStation.Text = "Station List";
             this.btnListStation.UseVisualStyleBackColor = false;
+            this.btnListStation.Click += new System.EventHandler(this.btnListStation_Click);
             // 
             // btnMap
             // 
@@ -179,6 +187,7 @@ namespace GeoMapper
             this.btnMap.TabIndex = 4;
             this.btnMap.Text = "Map";
             this.btnMap.UseVisualStyleBackColor = false;
+            this.btnMap.Click += new System.EventHandler(this.btnMap_Click);
             // 
             // splitContainer4
             // 
@@ -190,31 +199,31 @@ namespace GeoMapper
             // 
             // splitContainer4.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.tabControl1);
+            this.splitContainer4.Panel1.Controls.Add(this.tabControlTools);
             // 
             // splitContainer4.Panel2
             // 
             this.splitContainer4.Panel2.Controls.Add(this.button2);
             this.splitContainer4.Panel2.Controls.Add(this.button1);
-            this.splitContainer4.Size = new System.Drawing.Size(201, 430);
-            this.splitContainer4.SplitterDistance = 366;
+            this.splitContainer4.Size = new System.Drawing.Size(201, 491);
+            this.splitContainer4.SplitterDistance = 427;
             this.splitContainer4.TabIndex = 0;
             // 
-            // tabControl1
+            // tabControlTools
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.ItemSize = new System.Drawing.Size(65, 18);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(201, 366);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 1;
+            this.tabControlTools.Controls.Add(this.tabPage1);
+            this.tabControlTools.Controls.Add(this.tabPage2);
+            this.tabControlTools.Controls.Add(this.tabPage3);
+            this.tabControlTools.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlTools.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControlTools.ItemSize = new System.Drawing.Size(65, 15);
+            this.tabControlTools.Location = new System.Drawing.Point(0, 0);
+            this.tabControlTools.Multiline = true;
+            this.tabControlTools.Name = "tabControlTools";
+            this.tabControlTools.SelectedIndex = 0;
+            this.tabControlTools.Size = new System.Drawing.Size(201, 427);
+            this.tabControlTools.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabControlTools.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -232,10 +241,10 @@ namespace GeoMapper
             this.tabPage1.Controls.Add(this.trackBar1);
             this.tabPage1.Controls.Add(this.lblPosition);
             this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 19);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(193, 340);
+            this.tabPage1.Size = new System.Drawing.Size(193, 404);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Map";
             // 
@@ -369,39 +378,39 @@ namespace GeoMapper
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 19);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(193, 340);
+            this.tabPage2.Size = new System.Drawing.Size(193, 404);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Liste";
             // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 19);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(193, 340);
+            this.tabPage3.Size = new System.Drawing.Size(193, 404);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Stats";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(105, 35);
+            this.button2.Location = new System.Drawing.Point(143, 35);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 22);
+            this.button2.Size = new System.Drawing.Size(54, 22);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Show";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(19, 35);
+            this.button1.Location = new System.Drawing.Point(3, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 22);
+            this.button1.Size = new System.Drawing.Size(54, 22);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Hide";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -414,27 +423,72 @@ namespace GeoMapper
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.browser);
-            this.splitContainer2.Size = new System.Drawing.Size(1105, 693);
+            this.splitContainer2.Panel1.Controls.Add(this.tabControlDisplay);
+            this.splitContainer2.Size = new System.Drawing.Size(1105, 754);
             this.splitContainer2.SplitterDistance = 784;
             this.splitContainer2.TabIndex = 0;
+            // 
+            // tabControlDisplay
+            // 
+            this.tabControlDisplay.Controls.Add(this.tabPageMap);
+            this.tabControlDisplay.Controls.Add(this.tabPageList);
+            this.tabControlDisplay.Controls.Add(this.tabPageStats);
+            this.tabControlDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlDisplay.Location = new System.Drawing.Point(0, 0);
+            this.tabControlDisplay.Name = "tabControlDisplay";
+            this.tabControlDisplay.SelectedIndex = 0;
+            this.tabControlDisplay.Size = new System.Drawing.Size(784, 754);
+            this.tabControlDisplay.TabIndex = 2;
+            // 
+            // tabPageMap
+            // 
+            this.tabPageMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tabPageMap.Controls.Add(this.browser);
+            this.tabPageMap.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMap.Name = "tabPageMap";
+            this.tabPageMap.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMap.Size = new System.Drawing.Size(776, 728);
+            this.tabPageMap.TabIndex = 0;
+            this.tabPageMap.Text = "tabPageMap";
+            this.tabPageMap.UseVisualStyleBackColor = true;
             // 
             // browser
             // 
             this.browser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browser.Location = new System.Drawing.Point(0, 0);
+            this.browser.Location = new System.Drawing.Point(3, 3);
             this.browser.MinimumSize = new System.Drawing.Size(20, 20);
             this.browser.Name = "browser";
             this.browser.ScrollBarsEnabled = false;
-            this.browser.Size = new System.Drawing.Size(784, 693);
-            this.browser.TabIndex = 0;
+            this.browser.Size = new System.Drawing.Size(770, 722);
+            this.browser.TabIndex = 1;
+            // 
+            // tabPageList
+            // 
+            this.tabPageList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tabPageList.Location = new System.Drawing.Point(4, 22);
+            this.tabPageList.Name = "tabPageList";
+            this.tabPageList.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageList.Size = new System.Drawing.Size(309, 728);
+            this.tabPageList.TabIndex = 1;
+            this.tabPageList.Text = "tabPageListe";
+            this.tabPageList.UseVisualStyleBackColor = true;
+            // 
+            // tabPageStats
+            // 
+            this.tabPageStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.tabPageStats.Location = new System.Drawing.Point(4, 22);
+            this.tabPageStats.Name = "tabPageStats";
+            this.tabPageStats.Size = new System.Drawing.Size(309, 728);
+            this.tabPageStats.TabIndex = 2;
+            this.tabPageStats.Text = "tabPageStats";
+            this.tabPageStats.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(1310, 693);
+            this.ClientSize = new System.Drawing.Size(1310, 754);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Form1";
             this.Text = "GeoMapper";
@@ -452,13 +506,15 @@ namespace GeoMapper
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlTools.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.tabControlDisplay.ResumeLayout(false);
+            this.tabPageMap.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -468,13 +524,12 @@ namespace GeoMapper
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
-        private System.Windows.Forms.WebBrowser browser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnStat;
         private System.Windows.Forms.Button btnListStation;
         private System.Windows.Forms.Button btnMap;
         private SplitContainer splitContainer4;
-        private TabControl tabControl1;
+        private TabControl tabControlTools;
         private TabPage tabPage1;
         private Label label6;
         private ComboBox comboBox1;
@@ -493,6 +548,11 @@ namespace GeoMapper
         private TabPage tabPage3;
         private Button button2;
         private Button button1;
+        private TabControl tabControlDisplay;
+        private TabPage tabPageMap;
+        private WebBrowser browser;
+        private TabPage tabPageList;
+        private TabPage tabPageStats;
     }
 }
 
